@@ -1,32 +1,31 @@
-# Skill
+# Allterra
 
-Project skills for Claude Code, imported from [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill).
+E-commerce SPA for **Allterra**, "Shield" skincare for active mountain sports (skiing,
+climbing, trail running). Built with Next.js (App Router), TailwindCSS, and Framer Motion.
 
-These are installed under `.claude/skills/` so Claude Code picks them up automatically
-in this project. The main one to know about:
+## Stack
 
-- **`design-taste-frontend`** (`.claude/skills/taste-skill/`) — anti-slop frontend design
-  skill for landing pages, portfolios, and redesigns. Reads the brief, infers a design
-  direction, and ships interfaces that don't look templated.
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- Framer Motion (`framer-motion`)
+- Phosphor Icons (`@phosphor-icons/react`)
 
-Other bundled skills, all focused on frontend/web design taste:
+## Getting started
 
-| Skill | Purpose |
-|---|---|
-| `taste-skill-v1` | Original v1 of the taste skill, kept for backward compatibility |
-| `gpt-tasteskill` | Awwwards-level design + GSAP motion engineering |
-| `image-to-code-skill` | Generates reference design images, then implements code to match |
-| `imagegen-frontend-web` | Generates premium website design reference images (no code) |
-| `imagegen-frontend-mobile` | Generates premium mobile app screen concepts (no code) |
-| `brandkit` | Generates brand-guidelines boards, logo systems, identity decks |
-| `redesign-skill` | Audits and upgrades existing sites/apps to premium quality |
-| `soft-skill` | Expensive, soft UI look — premium fonts, whitespace, depth |
-| `output-skill` | Prevents lazy/truncated/placeholder code output |
-| `minimalist-skill` | Clean, editorial, monochrome interfaces |
-| `brutalist-skill` | Raw, Swiss-typography, industrial/tactical UI |
-| `stitch-skill` | Google Stitch-compatible semantic design rules |
+```bash
+npm install
+npm run dev
+```
 
-Claude Code loads these automatically for tasks that match their descriptions — just ask
-for a website, landing page, redesign, etc. and the relevant skill kicks in.
+Open [http://localhost:3000](http://localhost:3000).
 
-See `.claude/skills/THIRD_PARTY_NOTICE.md` for license/attribution details (MIT, © Leonxlnx).
+## Project structure
+
+- `lib/products.ts` — mock product database (8 products across the Départ, Ascension
+  and Refuge collections, each with 4 format variants: Normal, Miniature, Recharge
+  normale, Recharge miniature).
+- `app/` — Next.js App Router pages and layout.
+- `.claude/skills/` — Claude Code project skills imported from
+  [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill), used to keep the
+  frontend design on-brand and free of generic "AI-slop" patterns. See
+  `.claude/skills/THIRD_PARTY_NOTICE.md` for attribution.
